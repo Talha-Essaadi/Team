@@ -1,4 +1,13 @@
-// Online C compiler to run C program online
+// what is the update in this version 
+// case 1 : yes
+// case 2 : yes
+// case 3 : NO
+// case 4 : NO
+// case 5 : NO
+// case 6 : yes
+// case 7 : yes
+
+
 #include <stdio.h>
 
 int main() {
@@ -7,9 +16,10 @@ int x = 8 ;
 int r = 0 ;
 int z = 0 ;
 int livre = 1 ;
-int num = 0 ;// line 75
+
 
 while ( x <= 7 || x >= 7 ) {
+    printf("\n");
     printf("----- Système de Gestion de Stock de Librairie -----\n");
     printf("1. Ajouter un livre au stock : \n");
     printf("2. Afficher tous les livres disponibles\n");
@@ -64,21 +74,24 @@ Livre ajouté avec succès !*/
        case  2 :
       //AFFICHER WITH DETAILS STOCKER********************************** 
       
-       
+     int num = 0 ; 
+      char *N[5] = {"le titre est", "l'auteur est","le prix est","la quantité est" , "la 2 est"};
     while (r < z) {
-        
+       
   if ( r % 4 == 0 ){
          printf("\n");
+         
         printf("Livre %d :\n", livre);
-       
+       num = 0 ;
         livre++;
+        
       }
-     printf("%s\n", &names[r] );
+     printf("%s : %s\n", N[num], &names[r] );
+     
+     //why I use '&' in names and we dont use '&' in N ?
      num++;
      r++;
-     
-    
-     
+
    }
        break ;
        case 3 :
@@ -90,9 +103,12 @@ Livre ajouté avec succès !*/
        case 5 :
        printf("number : 5\n");
        break ;
+       
        case 6 :
-       printf("number : 6\n");
+       int numLivres = z / 4 ;
+       printf("le nombre total de livres en stock est : %d\n", numLivres);
        break ;
+       
        case 7 :
         printf("Merci d'avoir utilisé le système de gestion de stock. \n") ;
        return 0;
@@ -109,4 +125,4 @@ Livre ajouté avec succès !*/
 printf("=== Session Ended. Please Run the code again === ") ; 
     
    return 0;
-}// on github
+}

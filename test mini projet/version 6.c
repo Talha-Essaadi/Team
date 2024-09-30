@@ -7,7 +7,7 @@ int x = 8 ;
 int r = 0 ;
 int z = 0 ;
 int livre = 1 ;
-int num = 0 ;// line 75
+
 
 while ( x <= 7 || x >= 7 ) {
     printf("----- Système de Gestion de Stock de Librairie -----\n");
@@ -64,21 +64,24 @@ Livre ajouté avec succès !*/
        case  2 :
       //AFFICHER WITH DETAILS STOCKER********************************** 
       
-       
+     int num = 0 ; 
+      char *N[5] = {"le titre est", "l'auteur est","le prix est","la quantité est" , "la 2 est"};
     while (r < z) {
-        
+       
   if ( r % 4 == 0 ){
          printf("\n");
+         
         printf("Livre %d :\n", livre);
-       
+       num = 0 ;
         livre++;
+        
       }
-     printf("%s\n", &names[r] );
+     printf("%s : %s\n", N[num], &names[r] );
+     
+     //why I use '&' in names and we dont use '&' in N ?
      num++;
      r++;
-     
-    
-     
+
    }
        break ;
        case 3 :
@@ -109,4 +112,4 @@ Livre ajouté avec succès !*/
 printf("=== Session Ended. Please Run the code again === ") ; 
     
    return 0;
-}// on github
+}
