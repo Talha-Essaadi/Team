@@ -1,14 +1,19 @@
 // what is the update in this version 
+
+
+// just syntax
+
+//previos version
 // case 1 : yes
-// case 2 : yes 
-// case 3 : NO
+// case 2 : yes
+// case 3 : 80 %
 // case 4 : NO
 // case 5 : NO
 // case 6 : yes
 // case 7 : yes
 
 // Question : line 91 
-
+// Online C compiler to run C program online
 #include <stdio.h>
 
 int main() {
@@ -20,6 +25,7 @@ int livre = 1 ;
 
 
 while ( x <= 7 || x >= 7 ) {
+    char *N3[1] ;
     printf("\n");
     printf("----- Système de Gestion de Stock de Librairie -----\n");
     printf("1. Ajouter un livre au stock : \n");
@@ -74,9 +80,11 @@ Livre ajouté avec succès !*/
        
        case  2 :
       //AFFICHER WITH DETAILS STOCKER********************************** 
-      
+      if ( z == 0) {
+          printf("Aucun livre en stock.\n");
+      }
      int num = 0 ; 
-      char *N[5] = {"le titre est", "l'auteur est","le prix est","la quantité est" , "la 2 est"};
+      char *N[4] = {"le titre est", "l'auteur est","le prix est","la quantité est" , };
     while (r < z) {
        
   if ( r % 4 == 0 ){
@@ -95,9 +103,36 @@ Livre ajouté avec succès !*/
 
    }
        break ;
+       
        case 3 :
-       printf("number : 3\n");
+       printf("Entrez le titre du livre à rechercher : ");
+       scanf("%s", &N3[0]);
+       
+       int loop = 0 ;
+       loop = z / 4 ;
+       int jijo = 0 ;
+       int hiho = 0 ;
+       int yy ;
+       
+       if ( z == 0) {
+          printf("pas de livre trouver en stock \n Taper 2 pour trouver un livre \n"); 
+       }
+       else if ( z != 0 ) {
+           
+          while ( jijo < loop) {
+              yy = *names[hiho] ;
+           if( yy == *N3[0]){
+             printf("le livre existe\n");  
+           }
+           hiho = hiho  + 4 ;
+           jijo++;
+      } 
+       }
+       
+      
        break ;
+       
+       
        case 4 :
        printf("number : 4\n");
        break ;
